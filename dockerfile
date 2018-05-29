@@ -18,5 +18,6 @@ RUN apt-get update && apt-get -y upgrade && apt-get install -y build-essential &
     make install && make config && apt-get clean && apt-get autoclean && rm -rf /var/lib/apt/lists/*
 
 CMD ["/usr/sbin/asterisk", "-f"]
-EXPOSE 5060
+
+EXPOSE 5060/tcp
 EXPOSE 10000-20000/udp
